@@ -3,118 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonam Tshering | Executive Portfolio</title>
+    <title>Sonam Tshering | Executive Profile</title>
     <style>
-        /* 1. LAYOUT & FONTS */
-        body { 
-            font-family: "SF Pro Display", -apple-system, system-ui, sans-serif; 
-            margin: 0; 
-            color: #1c1e21; 
-            background-color: #ffffff;
-        }
-
-        /* 2. THE HEADER (Your building photo) */
-        .header-image { 
+        /* CSS DESIGN SYSTEM */
+        body { font-family: -apple-system, system-ui, sans-serif; margin: 0; color: #1c1e21; line-height: 1.6; }
+        
+        /* The Background Header Photo */
+        .banner { 
             width: 100%; 
-            height: 450px; 
-            background: url('header.jpg') no-repeat center center;
-            background-size: cover; /* This makes the photo fill the whole top area */
+            height: 400px; 
+            background: #24292e url('header.jpg') no-repeat center center; 
+            background-size: cover; 
         }
 
-        /* 3. THE MAIN CONTAINER */
-        .container { 
-            max-width: 1040px; 
-            margin: 0 auto; 
-            padding: 60px 20px; 
-            display: flex; /* This creates the two-column "Meta" look */
-            gap: 80px; 
-        }
-
-        /* 4. SIDEBAR (Your profile photo) */
+        .container { max-width: 1040px; margin: 0 auto; padding: 60px 20px; display: flex; gap: 80px; }
+        
+        /* Sidebar with Profile Photo */
         .sidebar { width: 320px; flex-shrink: 0; }
+        .sidebar img { width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 24px; }
+
+        /* Main Bio Content */
+        .content { flex-grow: 1; }
+        h1 { font-size: 44px; margin: 0; font-weight: 700; letter-spacing: -1px; }
+        .role { font-size: 14px; font-weight: 700; color: #65676b; text-transform: uppercase; margin-bottom: 40px; display: block; }
         
-        .profile-img { 
-            width: 100%; 
-            border-radius: 8px; /* Sharp, modern professional corners */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
-            margin-bottom: 24px; 
-        }
+        h2 { font-size: 24px; border-bottom: 1px solid #ebedf0; padding-bottom: 12px; margin-top: 50px; }
+        p, li { font-size: 18px; color: #4b4f56; }
 
-        /* 5. CONTENT (Your CV Details) */
-        .bio-content { flex-grow: 1; }
-
-        h1 { font-size: 48px; font-weight: 800; margin: 0; letter-spacing: -1px; }
-        
-        .role-title { 
-            font-size: 14px; 
-            font-weight: 700; 
-            color: #65676b; 
-            text-transform: uppercase; 
-            letter-spacing: 1.2px; 
-            margin-bottom: 40px;
-            display: block;
-        }
-
-        h2 { 
-            font-size: 24px; 
-            border-bottom: 1px solid #ebedf0; 
-            padding-bottom: 12px; 
-            margin-top: 50px; 
-        }
-
-        p, li { font-size: 18px; line-height: 1.6; color: #4b4f56; margin-bottom: 24px; }
-
-        .contact-box { font-size: 15px; color: #65676b; line-height: 1.8; margin-top: 20px; }
-
-        /* Responsive design for phones */
-        @media (max-width: 850px) {
-            .container { flex-direction: column; gap: 40px; }
-            .sidebar { width: 100%; }
-            .header-image { height: 250px; }
-        }
+        @media (max-width: 850px) { .container { flex-direction: column; } .sidebar { width: 100%; } .banner { height: 250px; } }
     </style>
 </head>
 <body>
 
-    <div class="header-image"></div>
+    <div class="banner"></div>
 
     <div class="container">
         <div class="sidebar">
-            <img src="profile.jpg" class="profile-img" alt="Sonam Tshering">
-            <div class="contact-box">
-                <div>📍 Bebena, Thimphu, Bhutan</div>
-                <div>✉️ sonam03200327@gmail.com</div>
-                <div>📞 +975-17321034</div>
+            <img src="profile.jpg" alt="Sonam Tshering">
+            <div style="font-size: 14px; color: #65676b;">
+                <p>📍 Bebena, Thimphu</p>
+                <p>✉️ sonam03200327@gmail.com</p>
+                <p>📞 +975-17321034</p>
             </div>
         </div>
 
-        <div class="bio-content">
+        <div class="content">
             <h1>Sonam Tshering</h1>
-            <span class="role-title">Accounts Officer | Bhutan National Bank Limited</span>
+            <span class="role">Accounts Officer | Bhutan National Bank Limited</span>
 
             <h2>Biography</h2>
             <p>
-                Sonam Tshering is a detail-oriented Accounts Officer specializing in bank-level loan reconciliations and centralized payroll systems. 
-                Based in Thimphu, he currently manages complex financial operations at **Bhutan National Bank Limited**.
+                Sonam Tshering is a detail-oriented Accounts Officer specializing in bank-level loan reconciliations and centralized payroll systems at <strong>Bhutan National Bank Limited</strong>.
             </p>
 
-            <h2>Professional Experience</h2>
-            <p>
-                <strong>Bhutan National Bank Limited</strong><br>
-                <em>Accounts Officer (Dec 2023 – Present)</em><br>
-                Overseeing payroll authorization and loan reconciliations using Advanced Excel and Power Query.
-            </p>
-            <p>
-                <strong>RICBL</strong><br>
-                <em>Corporate Credit Officer (Sept 2023 – Nov 2023)</em><br>
-                Managed loan evaluations and risk assessments for corporate portfolios.
-            </p>
-
-            <h2>Education & Honors</h2>
+            <h2>Achievements</h2>
             <ul>
-                <li><strong>King’s Certificate Recipient</strong>: Overall School Topper in Class XII at Drukgyel Central School.</li>
-                <li><strong>Bachelor of Commerce (Accounting)</strong>: Gedu College of Business Studies (75.1% Aggregate).</li>
-                <li><strong>Academic Excellence</strong>: 3rd Semester Topper at GCBS (80.8%).</li>
+                <li><strong>Certificate Recipient</strong>: Overall Topper in Class XII.</li>
+                <li><strong>B.Com (Accounting)</strong>: Gedu College of Business Studies.</li>
+                <li><strong>Academic Topper</strong>: Semester Topper at GCBS.</li>
             </ul>
         </div>
     </div>
