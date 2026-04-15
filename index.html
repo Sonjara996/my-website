@@ -5,43 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonam Tshering | Executive Profile</title>
     <style>
-        /* CSS DESIGN SYSTEM */
-        body { font-family: -apple-system, system-ui, sans-serif; margin: 0; color: #1c1e21; line-height: 1.6; }
+        /* 1. THE HUGE WATERMARK BACKGROUND */
+        body { 
+            font-family: -apple-system, system-ui, sans-serif; 
+            margin: 0; 
+            color: #1c1e21; 
+            line-height: 1.6;
+            
+            /* This takes header.jpg, locks it to the background, stretches it huge, 
+               and puts an 85% white fade over it so it looks like a watermark! */
+            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('header.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
         
-        /* The Background Header Photo */
-        .banner { 
+        /* 2. THE GLASS CONTENT BOX */
+        .container { 
+            max-width: 1100px; 
+            margin: 60px auto; 
+            padding: 60px; 
+            /* This creates a semi-transparent white box that blurs the background behind it */
+            background: rgba(255, 255, 255, 0.6); 
+            backdrop-filter: blur(10px); 
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            display: flex; 
+            gap: 80px; 
+        }
+        
+        /* 3. UNIQUE PROFILE PHOTO DESIGN */
+        .sidebar { width: 350px; flex-shrink: 0; }
+        
+        .profile-img { 
             width: 100%; 
-            height: 400px; 
-            background: #24292e url('header.jpg') no-repeat center center; 
-            background-size: cover; 
+            height: 400px;
+            object-fit: cover;
+            /* This creates a unique asymmetrical leaf/modern shape instead of a boring square */
+            border-radius: 20px 100px 20px 100px; 
+            /* This adds a cool solid shadow block behind the photo */
+            box-shadow: 15px 15px 0px #24292e, 0 15px 30px rgba(0,0,0,0.2); 
+            margin-bottom: 30px; 
+            border: 4px solid white;
         }
 
-        .container { max-width: 1040px; margin: 0 auto; padding: 60px 20px; display: flex; gap: 80px; }
-        
-        /* Sidebar with Profile Photo */
-        .sidebar { width: 320px; flex-shrink: 0; }
-        .sidebar img { width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 24px; }
+        .contact-box { font-size: 16px; color: #4b4f56; background: rgba(255,255,255,0.8); padding: 20px; border-radius: 12px; }
+        .contact-box p { margin: 10px 0; font-weight: 500;}
 
-        /* Main Bio Content */
+        /* 4. TEXT STYLING */
         .content { flex-grow: 1; }
-        h1 { font-size: 44px; margin: 0; font-weight: 700; letter-spacing: -1px; }
-        .role { font-size: 14px; font-weight: 700; color: #65676b; text-transform: uppercase; margin-bottom: 40px; display: block; }
+        h1 { font-size: 52px; margin: 0; font-weight: 800; letter-spacing: -1px; color: #111;}
+        .role { font-size: 16px; font-weight: 700; color: #0668E1; text-transform: uppercase; margin-bottom: 40px; display: block; letter-spacing: 1.5px;}
         
-        h2 { font-size: 24px; border-bottom: 1px solid #ebedf0; padding-bottom: 12px; margin-top: 50px; }
-        p, li { font-size: 18px; color: #4b4f56; }
+        h2 { font-size: 28px; border-bottom: 2px solid rgba(0,0,0,0.1); padding-bottom: 12px; margin-top: 50px; color: #222;}
+        p, li { font-size: 19px; color: #333; }
+        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 15px; }
 
-        @media (max-width: 850px) { .container { flex-direction: column; } .sidebar { width: 100%; } .banner { height: 250px; } }
+        /* Mobile View Adjustments */
+        @media (max-width: 900px) { 
+            .container { flex-direction: column; margin: 20px; padding: 30px; gap: 40px;} 
+            .sidebar { width: 100%; } 
+            .profile-img { height: auto; border-radius: 20px 60px 20px 60px; box-shadow: 10px 10px 0px #24292e;}
+        }
     </style>
 </head>
 <body>
 
-    <div class="banner"></div>
-
     <div class="container">
         <div class="sidebar">
-            <img src="profile.jpg" alt="Sonam Tshering">
-            <div style="font-size: 14px; color: #65676b;">
-                <p>📍 Bebena, Thimphu</p>
+            <img src="profile.jpg" class="profile-img" alt="Sonam Tshering">
+            <div class="contact-box">
+                <p>📍 Bebena, Thimphu, Bhutan</p>
                 <p>✉️ sonam03200327@gmail.com</p>
                 <p>📞 +975-17321034</p>
             </div>
@@ -53,14 +87,23 @@
 
             <h2>Biography</h2>
             <p>
-                Sonam Tshering is a detail-oriented Accounts Officer specializing in bank-level loan reconciliations and centralized payroll systems at <strong>Bhutan National Bank Limited</strong>.
+                Detail-oriented Accounts Officer specializing in bank-level loan reconciliations and centralized payroll systems at <strong>Bhutan National Bank Limited</strong>. Adept at optimizing resource utilization and resolving audit-critical discrepancies with a combined background in corporate credit and financial reporting.
             </p>
+
+            <h2>Experience</h2>
+            <p><strong>Bhutan National Bank Limited</strong><br>
+            <em>Accounts Officer | Dec 2023 – Present</em><br>
+            Managing payroll authorization, complex reconciliations, and monthly reporting using Advanced Excel and Power Query.</p>
+
+            <p><strong>RICBL</strong><br>
+            <em>Corporate Credit Officer | Sept 2023 – Nov 2023</em><br>
+            Handled loan evaluation, risk assessment, and portfolio management.</p>
 
             <h2>Achievements</h2>
             <ul>
-                <li><strong>Certificate Recipient</strong>: Overall Topper in Class XII.</li>
-                <li><strong>B.Com (Accounting)</strong>: Gedu College of Business Studies.</li>
-                <li><strong>Academic Topper</strong>: Semester Topper at GCBS.</li>
+                <li><strong>King’s Certificate Recipient</strong>: Overall School Topper in Class XII.</li>
+                <li><strong>B.Com (Accounting)</strong>: Gedu College of Business Studies (75.1% Aggregate).</li>
+                <li><strong>Academic Topper</strong>: 3rd Semester Topper at GCBS (80.8%).</li>
             </ul>
         </div>
     </div>
