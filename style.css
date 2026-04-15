@@ -135,3 +135,28 @@ section h2 {
     transform: translateY(0);
   }
 }
+/* ABOUT SECTION */
+.about {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-box {
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  line-height: 1.6;
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.about-box:hover {
+  box-shadow: 0 0 25px cyan;
+  transform: scale(1.02);
+}
