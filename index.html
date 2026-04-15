@@ -3,90 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonam Tshering | Executive Portfolio</title>
+    <title>Sonam Tshering | Executive Profile</title>
     <style>
-        /* Modern Executive Styling */
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background-color: #fff; color: #1c1e21; }
+        :root { --text-main: #1c1e21; --text-sub: #65676b; --border: #dadde1; }
+        body { font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; background-color: #ffffff; color: var(--text-main); }
         
-        /* The Header Image (Landscape/Building) */
-        .header-banner { 
-            width: 100%; 
-            height: 400px; 
-            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('header.jpg');
-            background-size: cover;
-            background-position: center;
+        /* THE FULL-WIDTH HEADER IMAGE */
+        .header-section { width: 100%; height: 480px; position: relative; overflow: hidden; }
+        .header-section img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* CONTENT LAYOUT */
+        .container { max-width: 1040px; margin: 0 auto; padding: 60px 20px; display: flex; gap: 80px; }
+        
+        /* SIDEBAR (Profile Photo & Contact) */
+        .sidebar { width: 320px; flex-shrink: 0; }
+        .profile-img { width: 100%; border-radius: 8px; margin-bottom: 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .contact-box { font-size: 15px; color: var(--text-sub); line-height: 1.8; }
+        
+        /* MAIN BIO (The Zuckerberg Style) */
+        .bio-section { flex-grow: 1; }
+        h1 { font-size: 44px; font-weight: 700; margin: 0 0 8px 0; letter-spacing: -0.5px; }
+        .job-title { font-size: 14px; font-weight: 700; text-transform: uppercase; color: var(--text-sub); letter-spacing: 1px; margin-bottom: 40px; }
+        
+        h2 { font-size: 24px; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-top: 50px; }
+        p { font-size: 19px; line-height: 1.6; color: #4b4f56; margin-bottom: 28px; font-weight: 400; }
+        
+        ul { padding-left: 20px; font-size: 18px; color: #4b4f56; }
+        li { margin-bottom: 12px; }
+
+        @media (max-width: 850px) {
+            .container { flex-direction: column; gap: 40px; }
+            .sidebar { width: 100%; }
+            .header-section { height: 300px; }
         }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; display: flex; gap: 60px; }
-
-        /* Sidebar with Profile Pic */
-        .sidebar { flex: 1; position: sticky; top: 40px; }
-        .profile-pic { 
-            width: 100%; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
-            margin-bottom: 24px;
-        }
-
-        /* Main Biography Content */
-        .main-content { flex: 2; }
-        h1 { font-size: 48px; margin: 0 0 10px 0; font-weight: 700; }
-        .subtitle { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #65676b; margin-bottom: 30px; }
-        
-        h2 { font-size: 24px; border-bottom: 1px solid #ebedf0; padding-bottom: 12px; margin-top: 40px; }
-        p { font-size: 18px; line-height: 1.6; color: #4b4f56; margin-bottom: 24px; }
-        
-        .contact-info { background: #f0f2f5; padding: 20px; border-radius: 8px; font-size: 15px; }
-        .contact-item { margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
-
-        @media (max-width: 850px) { .container { flex-direction: column; } .sidebar { position: static; } }
     </style>
 </head>
 <body>
 
-    <div class="header-banner"></div>
+    <div class="header-section">
+        <img src="header.jpg" alt="Bhutan Landscape">
+    </div>
 
     <div class="container">
         <div class="sidebar">
-            <img src="profile.jpg" class="profile-pic" alt="Sonam Tshering">
-            <div class="contact-info">
-                <div class="contact-item">📍 Bebena, Thimphu, Bhutan</div>
-                <div class="contact-item">✉️ sonam03200327@gmail.com</div>
-                <div class="contact-item">📞 +975-17321034</div>
+            <img src="profile.jpg" class="profile-img" alt="Sonam Tshering">
+            <div class="contact-box">
+                <div>📍 Bebena, Thimphu, Bhutan</div>
+                <div>✉️ sonam03200327@gmail.com</div>
+                <div>📞 +975-17321034</div>
             </div>
         </div>
 
-        <div class="main-content">
+        <div class="bio-section">
             <h1>Sonam Tshering</h1>
-            <div class="subtitle">Accounts Officer | Bhutan National Bank Limited</div>
+            <div class="job-title">Accounts Officer, Bhutan National Bank Limited</div>
 
-            <h2>Professional Summary</h2>
+            <h2>Biography</h2>
             <p>
-                Detail-oriented Accounts Officer specializing in bank-level loan reconciliations and centralized payroll systems[cite: 126]. 
-                Adept at optimizing resource utilization and resolving audit-critical discrepancies across multiple financial institutions[cite: 127].
+                Sonam Tshering is a detail-oriented Accounts Officer specializing in bank-level loan reconciliations and centralized payroll systems. 
+                Currently serving at Bhutan National Bank Limited, he brings a combined background in corporate credit and financial reporting.
             </p>
 
             <h2>Experience</h2>
             <p>
-                <strong>Accounts Officer | Bhutan National Bank Limited</strong><br>
-                <em>Dec 2023 – Present</em><br>
-                Managing payroll authorization and complex loan reconciliations using Advanced Excel and Power Query[cite: 88, 92].
+                <strong>Bhutan National Bank Limited</strong><br>
+                <em>Accounts Officer (Dec 2023 – Present)</em><br>
+                Oversees payroll authorization and complex loan reconciliations utilizing Advanced Excel and Power Query.
             </p>
             <p>
-                <strong>Corporate Credit Officer | RICBL</strong><br>
-                <em>Sept 2023 – Nov 2023</em><br>
-                Focused on corporate loan evaluation, risk assessment, and portfolio management[cite: 94, 96].
+                <strong>RICBL</strong><br>
+                <em>Corporate Credit Officer (Sept 2023 – Nov 2023)</em><br>
+                Managed loan evaluation, risk assessment, and portfolio management.
             </p>
 
             <h2>Education & Achievements</h2>
-            <p>
-                <strong>King’s Certificate Recipient</strong><br>
-                Awarded for being the Overall School Topper in Class XII at Drukgyel Central School[cite: 103, 119].
-            </p>
-            <p>
-                <strong>Bachelor of Commerce (Accounting)</strong><br>
-                Gedu College of Business Studies (GCBS). 3rd Semester Academic Topper with 80.8%[cite: 102, 104].
-            </p>
+            <ul>
+                <li><strong>King’s Certificate Recipient</strong>: Awarded for being the Overall School Topper in Class XII.</li>
+                <li><strong>Gedu College of Business Studies</strong>: Bachelor of Commerce (Accounting) with 75.1% Aggregate.</li>
+                <li><strong>Academic Excellence</strong>: 3rd Semester Topper at GCBS (80.8%).</li>
+            </ul>
         </div>
     </div>
 
