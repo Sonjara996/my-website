@@ -3,157 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonam Tshering | Profile</title>
+    <title>Sonam Tshering | Portfolio</title>
     <style>
-        /* THE FIXED BACKGROUND (Wix Style) */
+        /* GLOBAL STYLES & FIXED BACKGROUND */
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            /* Your landscape/building photo becomes the unmoving background */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-image: url('header.jpg');
             background-attachment: fixed;
             background-position: center;
-            background-repeat: no-repeat;
             background-size: cover;
+            scroll-behavior: smooth;
         }
 
-        /* THE FLOATING CARD */
+        /* EXTRA FEATURE 1: STICKY NAVIGATION BAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            padding: 15px 0;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+        }
+        .navbar a:hover { color: #0056b3; }
+
+        /* EXTRA FEATURE 2: FADE-IN ANIMATION */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .page-container {
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            padding: 100px 20px;
+            padding: 120px 20px;
+            animation: fadeInUp 1s ease-out; /* Apply the animation here */
         }
 
         .profile-card {
             background-color: #ffffff;
             width: 1000px;
             display: flex;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            border-radius: 4px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            border-radius: 8px;
             overflow: hidden;
         }
 
-        /* LEFT SIDE (Photo) */
+        /* SIDEBAR & PHOTO */
         .sidebar {
-            width: 400px;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 380px;
+            background-color: #f9f9f9;
             padding: 60px 40px;
+            text-align: center;
+            border-right: 1px solid #eee;
         }
 
         .profile-img {
             width: 100%;
-            height: auto;
-            object-fit: cover;
-            margin-bottom: 30px;
+            border-radius: 4px;
+            transition: transform 0.5s ease; /* EXTRA FEATURE 3: HOVER EFFECT */
+        }
+        .profile-img:hover {
+            transform: scale(1.03); /* Photo grows slightly on hover */
         }
 
-        .name-box {
-            text-align: center;
-        }
-
-        .name-box h1 {
-            font-size: 28px;
-            margin: 0;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .job-title {
-            color: #777;
-            font-size: 14px;
-            margin-top: 10px;
-            letter-spacing: 1px;
-        }
-
-        /* RIGHT SIDE (Info) */
+        /* MAIN CONTENT */
         .main-content {
             flex: 1;
-            padding: 60px 80px;
-            background: white;
+            padding: 60px 70px;
         }
 
-        h2 {
-            font-size: 32px;
-            font-weight: 300;
-            margin-bottom: 30px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
+        .job-card {
+            padding: 15px;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        .job-card:hover {
+            background: #f0f7ff; /* Highlights the job when you hover over it */
         }
 
-        p {
-            line-height: 1.8;
-            color: #333;
-            font-size: 16px;
-        }
+        h1 { font-size: 32px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 5px; }
+        .subtitle { color: #888; letter-spacing: 1px; margin-bottom: 30px; }
+        h2 { font-weight: 300; font-size: 28px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .section-label { font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #0056b3; margin-top: 30px; display: block; }
 
-        .section-title {
-            font-weight: bold;
+        /* CONTACT FOOTER */
+        .footer {
             margin-top: 40px;
-            text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 2px;
-            color: #000;
-        }
-
-        .contact-footer {
-            margin-top: 50px;
-            font-size: 13px;
-            border-top: 1px solid #eee;
             padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 13px;
+            color: #666;
         }
 
-        /* Responsive for mobile */
         @media (max-width: 900px) {
             .profile-card { flex-direction: column; width: 100%; }
             .sidebar { width: 100%; box-sizing: border-box; }
-            .main-content { padding: 40px; }
         }
     </style>
 </head>
 <body>
+
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="mailto:sonam03200327@gmail.com">Contact Me</a>
+    </nav>
 
     <div class="page-container">
         <div class="profile-card">
             
             <div class="sidebar">
                 <img src="profile.jpg" class="profile-img" alt="Sonam Tshering">
-                <div class="name-box">
-                    <h1>Sonam Tshering</h1>
-                    <div class="job-title">Accounts Officer</div>
-                </div>
+                <h1>Sonam</h1>
+                <p class="subtitle">Accounts Officer</p>
             </div>
 
             <div class="main-content">
-                <h2>About Me</h2>
-                <p>
-                    I am a detail-oriented Accounts Officer specializing in bank-level loan reconciliations and centralized payroll systems. Currently, I am applying my expertise at <strong>Bhutan National Bank Limited</strong> to optimize resource utilization and resolve audit-critical discrepancies.
-                </p>
+                <h2>Professional Biography</h2>
+                <p>Detail-oriented Accounts Officer at <strong>Bhutan National Bank Limited</strong>, specializing in bank-level loan reconciliations and centralized payroll systems.</p>
 
-                <div class="section-title">Professional Experience</div>
-                <p>
-                    <strong>Bhutan National Bank Limited</strong> (2023–Present)<br>
-                    Accounts Officer managing payroll authorization and complex reconciliations using Advanced Excel & Power Query.
-                </p>
-                <p>
-                    <strong>RICBL</strong> (2023)<br>
-                    Corporate Credit Officer focused on risk assessment and loan evaluation.
-                </p>
+                <span class="section-label">Experience</span>
+                <div class="job-card">
+                    <p><strong>Bhutan National Bank Limited</strong><br>Dec 2023 – Present<br>
+                    <small>Managing payroll authorization and complex reconciliations using Advanced Excel & Power Query.</small></p>
+                </div>
+                
+                <div class="job-card">
+                    <p><strong>RICBL</strong><br>Sept 2023 – Nov 2023<br>
+                    <small>Handled corporate loan evaluation and risk assessment.</small></p>
+                </div>
 
-                <div class="section-title">Education & Honors</div>
-                <p>
-                    • <strong>Certificate Recipient</strong>: Overall School Topper<br>
-                    • <strong>B.Com (Accounting)</strong>: Gedu College of Business Studies<br>
-                    • <strong>Follower</strong>: Drukpa Kuenley
-                </p>
+                <span class="section-label">Education & Honors</span>
+                <ul>
+                    <li><strong>King’s Certificate Recipient</strong>: Overall School Topper (Class XII)</li>
+                    <li><strong>B.Com (Accounting)</strong>: Gedu College of Business Studies</li>
+                </ul>
 
-                <div class="contact-footer">
-                    📍 Thimphu, Bhutan | 📞 +975-17321034 | ✉️ sonam03200327@gmail.com
+                <div class="footer">
+                    📍 Thimphu, Bhutan | 📞 +975-17321034
                 </div>
             </div>
         </div>
