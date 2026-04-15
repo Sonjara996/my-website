@@ -3,218 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buson - Business Consulting</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>Sonam Tshering | Executive Profile</title>
     <style>
-        /* === RESET & BASE STYLES === */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: #ffffff;
-            color: #333;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        /* === COLOR VARIABLES === */
+        /* 1. THE DESIGN SYSTEM */
         :root {
-            --primary-blue: #09274d; /* Deep blue from top bar and headings */
-            --primary-red: #ff5f6d;  /* Salmon red from buttons */
-            --text-gray: #666666;
-            --light-bg: #fdfdfd;
+            --meta-blue: #0668E1;
+            --text-dark: #1c1e21;
+            --text-gray: #65676b;
+            --bg-gray: #f0f2f5;
         }
 
-        /* === TOP CONTACT BAR === */
-        .top-bar {
-            background-color: var(--primary-blue);
-            color: #ffffff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 5%;
-            font-size: 13px;
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0; 
+            background-color: #ffffff; 
+            color: var(--text-dark);
+            line-height: 1.6;
         }
 
-        .top-bar-left {
-            display: flex;
-            gap: 30px;
+        /* 2. THE LARGE HEADER PHOTO */
+        .header-banner {
+            width: 100%;
+            height: 450px;
+            background: url('header.jpg') no-repeat center center;
+            background-size: cover; /* This makes the photo look professional */
         }
 
-        .top-bar-left i {
-            margin-right: 8px;
-            color: #ccc;
+        /* 3. THE PAGE CONTENT */
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            display: flex; /* Creates the two-column layout */
+            gap: 80px;
         }
 
-        .top-bar-right .social-icons a {
-            color: #ffffff;
-            margin-left: 15px;
+        /* Sidebar Styling */
+        .sidebar { width: 300px; flex-shrink: 0; }
+        
+        .profile-img {
+            width: 100%;
+            border-radius: 12px; /* Slight rounded corners for executive look */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 24px;
+        }
+
+        .contact-info {
             font-size: 14px;
-            transition: color 0.3s ease;
+            color: var(--text-gray);
+            border-top: 1px solid #ebedf0;
+            padding-top: 20px;
         }
 
-        .top-bar-right .social-icons a:hover {
-            color: var(--primary-red);
-        }
+        /* Biography Styling */
+        .bio-content { flex-grow: 1; }
 
-        /* === MAIN NAVIGATION HEADER === */
-        .header-main {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            background-color: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo h1 {
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--primary-blue);
-        }
-
-        .logo span {
-            color: var(--primary-red);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links li a {
+        h1 { font-size: 48px; font-weight: 800; margin: 0; letter-spacing: -1px; }
+        
+        .job-tag {
             font-size: 14px;
-            font-weight: 600;
-            color: var(--primary-blue);
+            font-weight: 700;
             text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links li a:hover {
-            color: var(--primary-red);
-        }
-
-        /* === BUTTONS === */
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-red);
-            color: #ffffff;
-            padding: 15px 35px;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            border-radius: 4px;
-            transition: background 0.3s ease;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn:hover {
-            background-color: #e04e5b;
-        }
-
-        /* === HERO SECTION === */
-        .hero {
-            display: flex;
-            align-items: center;
-            padding: 80px 5% 120px 5%;
-            min-height: 80vh;
-            background: linear-gradient(to right, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.2) 100%), 
-                        url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero-subtitle {
-            color: var(--primary-red);
-            font-size: 16px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
+            color: var(--text-gray);
+            letter-spacing: 1.5px;
+            margin-bottom: 40px;
             display: block;
         }
 
-        .hero h2 {
-            font-size: 65px;
-            font-weight: 800;
-            color: var(--primary-blue);
-            line-height: 1.1;
-            margin-bottom: 40px;
-            letter-spacing: -1px;
+        h2 {
+            font-size: 24px;
+            border-bottom: 1px solid #ebedf0;
+            padding-bottom: 15px;
+            margin-top: 50px;
         }
 
-        /* === RESPONSIVE DESIGN === */
-        @media (max-width: 992px) {
-            .hero h2 { font-size: 45px; }
-            .nav-links { display: none; /* In a real site, add a hamburger menu here */ }
-            .top-bar { flex-direction: column; gap: 10px; text-align: center; }
+        p { font-size: 18px; color: #4b4f56; margin-bottom: 25px; }
+
+        ul { padding-left: 20px; }
+        li { font-size: 18px; color: #4b4f56; margin-bottom: 15px; }
+
+        /* Makes it look good on phones */
+        @media (max-width: 850px) {
+            .container { flex-direction: column; }
+            .header-banner { height: 280px; }
+            .sidebar { width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <div class="top-bar-left">
-            <span><i class="fa-solid fa-location-dot"></i> 65/A, 17th floor, Kings land, New York</span>
-            <span><i class="fa-solid fa-envelope"></i> info@consulting.com</span>
-        </div>
-        <div class="top-bar-right">
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+    <div class="header-banner"></div>
+
+    <div class="container">
+        <div class="sidebar">
+            <img src="profile.jpg" class="profile-img" alt="Sonam Tshering">
+            <div class="contact-info">
+                <p>📍 Bebena, Thimphu, Bhutan</p>
+                <p>✉️ sonam03200327@gmail.com</p>
+                <p>📞 +975-17321034</p>
             </div>
         </div>
-    </div>
 
-    <header class="header-main">
-        <div class="logo">
-            <h1>Buson<span>.</span></h1>
-        </div>
-        
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Cases</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Pages</a></li>
+        <div class="bio-content">
+            <h1>Sonam Tshering</h1>
+            <span class="job-tag">Accounts Officer | Bhutan National Bank Limited</span>
+
+            <h2>Biography</h2>
+            <p>
+                Sonam Tshering is a detail-oriented Accounts Officer specializing in bank-level loan reconciliations and centralized payroll systems. 
+                With a background at <strong>Bhutan National Bank</strong> and <strong>RICBL</strong>, he focuses on optimizing resource utilization 
+                and resolving audit-critical discrepancies.
+            </p>
+
+            <h2>Education & Honors</h2>
+            <ul>
+                <li><strong>King’s Certificate Recipient</strong> – Awarded for being the Overall School Topper in Class XII.</li>
+                <li><strong>Gedu College of Business Studies</strong> – Bachelor of Commerce (Accounting), 75.1% Aggregate.</li>
+                <li><strong>Academic Topper</strong> – 3rd Semester Topper at GCBS with 80.8%.</li>
             </ul>
-        </nav>
 
-        <a href="#" class="btn">Contact Now</a>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <span class="hero-subtitle">Welcome to Buson</span>
-            <h2>WE HELP YOU<br>TO GROW YOUR<br>BUSINESS</h2>
-            <a href="#" class="btn">Learn More</a>
+            <h2>Core Competencies</h2>
+            <p>Payroll Administration • Financial Reconciliation • Advanced MS Excel (Power Query) • ERP & Banking Systems.</p>
         </div>
-    </section>
+    </div>
 
 </body>
 </html>
