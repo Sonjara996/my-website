@@ -3,127 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonam Tshering | Executive Profile</title>
+    <title>Sonam Tshering | Profile</title>
     <style>
-        /* 1. THE DESIGN SYSTEM */
-        :root {
-            --meta-blue: #0668E1;
-            --text-dark: #1c1e21;
-            --text-gray: #65676b;
-            --bg-gray: #f0f2f5;
-        }
-
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0; 
-            background-color: #ffffff; 
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        /* 2. THE LARGE HEADER PHOTO */
-        .header-banner {
-            width: 100%;
-            height: 450px;
-            background: url('header.jpg') no-repeat center center;
-            background-size: cover; /* This makes the photo look professional */
-        }
-
-        /* 3. THE PAGE CONTENT */
-        .container {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            display: flex; /* Creates the two-column layout */
-            gap: 80px;
-        }
-
-        /* Sidebar Styling */
-        .sidebar { width: 300px; flex-shrink: 0; }
+        body { font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; margin: 0; color: #1c1e21; line-height: 1.5; }
         
-        .profile-img {
-            width: 100%;
-            border-radius: 12px; /* Slight rounded corners for executive look */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            margin-bottom: 24px;
-        }
+        /* The Meta-style full-width header */
+        .banner { width: 100%; height: 450px; background: #24292e; overflow: hidden; }
+        .banner img { width: 100%; height: 100%; object-fit: cover; }
 
-        .contact-info {
-            font-size: 14px;
-            color: var(--text-gray);
-            border-top: 1px solid #ebedf0;
-            padding-top: 20px;
-        }
-
-        /* Biography Styling */
-        .bio-content { flex-grow: 1; }
-
-        h1 { font-size: 48px; font-weight: 800; margin: 0; letter-spacing: -1px; }
+        .container { max-width: 1040px; margin: 0 auto; padding: 60px 20px; display: flex; gap: 80px; }
         
-        .job-tag {
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: var(--text-gray);
-            letter-spacing: 1.5px;
-            margin-bottom: 40px;
-            display: block;
-        }
+        /* Sidebar with Profile Pic */
+        .sidebar { width: 320px; flex-shrink: 0; }
+        .sidebar img { width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 24px; }
+        .contact { font-size: 15px; color: #65676b; }
 
-        h2 {
-            font-size: 24px;
-            border-bottom: 1px solid #ebedf0;
-            padding-bottom: 15px;
-            margin-top: 50px;
-        }
-
-        p { font-size: 18px; color: #4b4f56; margin-bottom: 25px; }
-
+        /* Main Bio Content */
+        .content { flex-grow: 1; }
+        h1 { font-size: 44px; margin: 0 0 10px 0; font-weight: 700; letter-spacing: -1px; }
+        .job-tag { font-size: 14px; font-weight: 700; color: #65676b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; display: block; }
+        
+        h2 { font-size: 24px; border-bottom: 1px solid #ebedf0; padding-bottom: 12px; margin-top: 50px; color: #1c1e21; }
+        p { font-size: 18px; color: #4b4f56; margin-bottom: 24px; }
         ul { padding-left: 20px; }
-        li { font-size: 18px; color: #4b4f56; margin-bottom: 15px; }
+        li { margin-bottom: 12px; font-size: 17px; color: #4b4f56; }
 
-        /* Makes it look good on phones */
-        @media (max-width: 850px) {
-            .container { flex-direction: column; }
-            .header-banner { height: 280px; }
-            .sidebar { width: 100%; }
-        }
+        @media (max-width: 850px) { .container { flex-direction: column; } .sidebar { width: 100%; } .banner { height: 280px; } }
     </style>
 </head>
 <body>
 
-    <div class="header-banner"></div>
+    <div class="banner">
+        <img src="header.jpg" alt="Header Image">
+    </div>
 
     <div class="container">
         <div class="sidebar">
-            <img src="profile.jpg" class="profile-img" alt="Sonam Tshering">
-            <div class="contact-info">
+            <img src="profile.jpg" alt="Sonam Tshering">
+            <div class="contact">
                 <p>📍 Bebena, Thimphu, Bhutan</p>
                 <p>✉️ sonam03200327@gmail.com</p>
                 <p>📞 +975-17321034</p>
             </div>
         </div>
 
-        <div class="bio-content">
+        <div class="content">
             <h1>Sonam Tshering</h1>
             <span class="job-tag">Accounts Officer | Bhutan National Bank Limited</span>
 
-            <h2>Biography</h2>
+            <h2>Professional Summary</h2>
             <p>
-                Sonam Tshering is a detail-oriented Accounts Officer specializing in bank-level loan reconciliations and centralized payroll systems. 
-                With a background at <strong>Bhutan National Bank</strong> and <strong>RICBL</strong>, he focuses on optimizing resource utilization 
-                and resolving audit-critical discrepancies.
+                Detail-oriented Accounts Officer specializing in bank-level loan reconciliations and centralized payroll systems. 
+                Adept at optimizing resource utilization and resolving audit-critical discrepancies with a combined background in corporate credit and financial reporting.
             </p>
 
-            <h2>Education & Honors</h2>
+            <h2>Experience</h2>
+            <p><strong>Bhutan National Bank Limited</strong><br>
+            <em>Accounts Officer | Dec 2023 – Present</em><br>
+            Managing payroll authorization, complex reconciliations, and monthly reporting using Advanced Excel and Power Query.</p>
+
+            <p><strong>RICBL</strong><br>
+            <em>Corporate Credit Officer | Sept 2023 – Nov 2023</em><br>
+            Handled loan evaluation, risk assessment, and portfolio management.</p>
+
+            <h2>Education & Achievements</h2>
             <ul>
-                <li><strong>King’s Certificate Recipient</strong> – Awarded for being the Overall School Topper in Class XII.</li>
-                <li><strong>Gedu College of Business Studies</strong> – Bachelor of Commerce (Accounting), 75.1% Aggregate.</li>
-                <li><strong>Academic Topper</strong> – 3rd Semester Topper at GCBS with 80.8%.</li>
+                <li><strong>King’s Certificate Recipient</strong>: Awarded for being the Overall School Topper in Class XII at Drukgyel Central School.</li>
+                <li><strong>Bachelor of Commerce (Accounting)</strong>: Gedu College of Business Studies (75.1% Aggregate).</li>
+                <li><strong>Academic Excellence</strong>: 3rd Semester Topper at GCBS with 80.8%.</li>
             </ul>
 
-            <h2>Core Competencies</h2>
-            <p>Payroll Administration • Financial Reconciliation • Advanced MS Excel (Power Query) • ERP & Banking Systems.</p>
+            <h2>Technical Skills</h2>
+            <p>ERP and Banking Systems • Advanced Excel (Power Query) • Payroll Administration • Financial Reconciliation • Operational Excellence.</p>
         </div>
     </div>
 
