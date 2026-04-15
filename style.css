@@ -3,12 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
 }
 
-/* BODY */
 body {
-  background: #0a0a0a;
+  background: #050505;
   color: white;
 }
 
@@ -16,46 +16,122 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
+  padding: 20px 60px;
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+}
+
+header h1 {
+  color: cyan;
+  letter-spacing: 2px;
 }
 
 nav a {
-  color: white;
-  margin-left: 20px;
+  margin-left: 25px;
   text-decoration: none;
+  color: white;
+  position: relative;
 }
 
-nav a:hover {
-  color: cyan;
+/* underline animation */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: cyan;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* HERO */
 .hero {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle, #0ff2 0%, #000 70%);
+
+  background: radial-gradient(circle at center, #00ffff22, #000);
+  text-align: center;
 }
 
 .hero h2 {
-  font-size: 50px;
-  color: cyan;
+  font-size: 60px;
+  background: linear-gradient(90deg, cyan, purple);
+  -webkit-background-clip: text;
+  color: transparent;
+
+  animation: fadeUp 1s ease forwards;
 }
 
+.hero p {
+  margin-top: 10px;
+  opacity: 0.7;
+  animation: fadeUp 1.5s ease forwards;
+}
+
+/* BUTTON GLOW */
 .hero button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: cyan;
+  margin-top: 25px;
+  padding: 12px 25px;
   border: none;
+  background: cyan;
+  color: black;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-/* PROJECT CARD */
+.hero button:hover {
+  box-shadow: 0 0 25px cyan;
+  transform: scale(1.05);
+}
+
+/* PROJECTS */
+section {
+  padding: 80px 40px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* CARDS */
 .card {
+  max-width: 250px;
+  margin: 20px auto;
   padding: 40px;
-  margin: 20px;
+  text-align: center;
+
   background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
   border: 1px solid rgba(255,255,255,0.1);
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 0 30px cyan;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
